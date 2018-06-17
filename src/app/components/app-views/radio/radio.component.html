@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div class="current">
+        <div class="current-dj">DJ Dell <span>with 34 listeners</span></div>
+        <div class="current-song marquee" title="Arch enemy - the eagle flies alon">
+            <span>Currently playing:</span> <br />
+            Arch enemy - the eagle flies alon
+        </div>
+    </div>
+    <div class="controlls">
+        <span (click)="togglePlay()" class="controll controll-blue"><em class="fa" [ngClass]="radioPlaying ? 'fa-pause' : 'fa-play'"></em></span>
+
+        <span class="controll controll-orange" (click)="volumeUp()" (mousedown)="mousedown(true)" (mouseup)="mouseup()" (mouseleave)="mouseup()"><em class="fa fa-volume-up"></em></span>
+
+        <span class="controll controll-orange" (click)="volumeDown()" (mousedown)="mousedown(false)" (mouseup)="mouseup()" (mouseleave)="mouseup()"><em class="fa fa-volume-down"></em></span>
+
+        <span class="controll controll-green"><em class="fa fa-bullhorn"></em></span>
+
+        <span class="controll controll-pink"><em class="fa fa-heart"></em></span>
+    </div>
+
+    <div class="volume">
+        volume at {{volume}}%
+    </div>
+</div>
